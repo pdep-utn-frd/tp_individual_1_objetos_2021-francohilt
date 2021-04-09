@@ -48,7 +48,7 @@ object rastrojero {
 		return altoDeLaCaja * 10
 	}
 	
-	method precioCompra(tipoDeMotor) { // BONUS 1)
+	method precioCompra(tipoDeMotor) { // BONUS (1)
 		return costoSinMotor + self.valorDeLaCaja() + tipoDeMotor.valor()
 	}
 
@@ -61,7 +61,7 @@ object rastrojero {
 	}
 }
 
-// BONUS 1)
+// BONUS (1)
 
 object motorNaftero {
 	var cv = 30
@@ -82,7 +82,7 @@ object motorDiesel {
 	}
 }
 
-// BONUS 2)
+// BONUS (2)
 
 object cartelera {
 	method publicitar(unVehiculo) { 
