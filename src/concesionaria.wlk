@@ -2,6 +2,9 @@
 object deltaMotores {
 	var capital = 100
 	
+	method capital() {
+		return capital
+	}
 	method esAfortunada() { 
 		return capital > 120
 	}
@@ -35,9 +38,10 @@ object rastrojero {
 	var altoDeLaCaja = 0.5
 	var tiempoSinVenderse = 0
 	const costoSinMotor = 20
+	var tipoDeMotor = motorDiesel
 	
 	method fabricante() { 
-		return "Rastrojero"
+		return "Talleres"
 	}
 	
 	method aumentarCaja(cant) {
@@ -48,7 +52,7 @@ object rastrojero {
 		return altoDeLaCaja * 10
 	}
 	
-	method precioCompra(tipoDeMotor) { // BONUS (1)
+	method precioCompra() { // BONUS (1)
 		return costoSinMotor + self.valorDeLaCaja() + tipoDeMotor.valor()
 	}
 
@@ -58,6 +62,10 @@ object rastrojero {
 	
 	method aumentarTiempoSinVenderse(cant) {
 		tiempoSinVenderse += cant
+	}
+	
+	method cambiarMotor(unMotor) {
+		tipoDeMotor = unMotor
 	}
 }
 
