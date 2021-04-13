@@ -98,3 +98,16 @@ object cartelera {
 	}
 }
 
+object cartelera2 { // Otra forma de pensarlo
+
+	var vehiculo // Por defecto: var vehiculo = null
+	
+	method publicitar() { // No puedo publicitar un vehiculo sin haber inicializado la variable vehiculo.
+		return "Promoción: " + vehiculo.fabricante()
+	}
+	
+	method cambiar(nuevoVehiculo) { 
+		vehiculo = nuevoVehiculo
+	}
+}
+
