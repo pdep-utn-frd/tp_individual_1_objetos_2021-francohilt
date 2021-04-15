@@ -35,4 +35,17 @@ describe "Tests de Delta Motores y de los vehiculos" {
 		rastrojero.aumentarTiempoSinVenderse(1)
 		assert.equals(40, rastrojero.precioCompra())
 	}
+	
+	test "la cartelera publicita correctamente un onix" {
+		assert.equals("Promoción: Chevrolet", cartelera.publicitar(onix))
+	}
+	
+	test "ambas implementaciones de la 
+         cartelera son equivalentes" {
+        cartelera2.cambiar(onix)	
+		assert.equals(cartelera.publicitar(onix), cartelera2.publicitar())
+		
+		cartelera2.cambiar(rastrojero)
+		assert.equals(cartelera.publicitar(rastrojero), cartelera2.publicitar())
+	}
 }
